@@ -23,7 +23,10 @@ class Post {
                 
                 @$category_state = wp_get_object_terms( $post[0]->ID , 'iran_map_state' )['slug'];
                 $product_categories = wp_get_object_terms( $post[0]->ID , 'iran_map_product_category' );
-                $post[0]->post_content = '<link rel="stylesheet" href="' . IRMAP_PLUGIN_URL . 'assets/css/iranMap.css" />';
+				$content = $post[0]->post_content;
+				$post[0]->post_content = '';
+                $post[0]->post_content .= '<link rel="stylesheet" href="' . IRMAP_PLUGIN_URL . 'assets/css/iranMap.css" />';
+				$post[0]->post_content .= '<script> var city_id = '.$post[0]->ID.' </script>';
                 $post[0]->post_content .= '<div id="iranmap-categories">';
     
                 foreach( $product_categories as $categories ):
@@ -46,9 +49,10 @@ class Post {
                     
     
                 endforeach;
+				
     
                 $post[0]->post_content .= '</div>';
-       
+				$post[0]->post_content .= $content;
             }
         }
         
@@ -62,6 +66,8 @@ class Post {
 
     public function pre_get_post( $query ) {
         
+		if ( ! $query->is_main_query() || !$query->is_post_type_archive() ) return;
+		
         if( isset($_GET['vendor_id']) && isset($_GET['category_id']) ) {
 
            $vendor_id = $_GET['vendor_id'];
