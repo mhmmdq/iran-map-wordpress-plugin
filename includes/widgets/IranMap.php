@@ -13,7 +13,7 @@ class IranMap extends Widget_Base {
     public function __construct( $data = array() , $args = null ) {
         parent::__construct( $data, $args );
         wp_register_style( 'iranMap-style', IRMAP_PLUGIN_URL . 'assets/css/iranMap.css', array(), '1.0.0' );   
-        wp_register_script( 'iranMap-script' , IRMAP_PLUGIN_URL . 'assets/js/iranMap.js' , ['jquery'] , '1.0.0' , true );
+        wp_register_script( 'iranMap-script' , IRMAP_PLUGIN_URL . 'assets/js/IranMap.js' , ['jquery'] , '1.0.0' , true );
     }
 
     public function get_name() {
