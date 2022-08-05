@@ -5,15 +5,15 @@ defined('ABSPATH') or die('No script kiddies please!');
 return [
     [
         'name' => 'آذربایجان شرقی',
-        'slug' => 'azarbajan-east',
+        'slug' => 'azerbaijan-east',
     ],
     [
         'name' => 'آذربایجان غربی',
-        'slug' => 'azarbajan-west',
+        'slug' => 'azerbaijan-west',
     ],
     [
         'name' => 'اردبیل',
-        'slug' => 'ardebil',
+        'slug' => 'ardabil',
     ],
     [
         'name' => 'اصفهان',
@@ -25,7 +25,7 @@ return [
     ],
     [
         'name' => 'ایلام',
-        'slug' => 'iliam',
+        'slug' => 'ilam',
     ],
     [
         'name' => 'بوشهر',
@@ -37,11 +37,11 @@ return [
     ],
     [
         'name' => 'چهارمحال و بختیاری',
-        'slug' => 'chaharmahal-vahari',
+        'slug' => 'chahar-mahaal-bakhtiari',
     ],
     [
         'name' => 'خراسان جنوبی',
-        'slug' => 'khorasan-jonebi',
+        'slug' => 'khorasan-south',
     ],
     [
         'name' => 'خراسان رضوی',
@@ -49,7 +49,7 @@ return [
     ],
     [
         'name' => 'خراسان شمالی',
-        'slug' => 'khorasan-shomali',
+        'slug' => 'khorasan-north',
     ],
     [
         'name' => 'خوزستان',
@@ -69,7 +69,7 @@ return [
     ],
     [
         'name' => 'فارس',
-        'slug' => 'faras',
+        'slug' => 'fars',
     ],
     [
         'name' => 'قزوین',
@@ -89,11 +89,11 @@ return [
     ],
     [
         'name' => 'كرمانشاه',
-        'slug' => 'kermanshahr',
+        'slug' => 'kermanshah',
     ],
     [
-        'name' => 'كهكيلويه',
-        'slug' => 'kahkiliye',
+        'name' => 'کهگیلویه و بویراحمد',
+        'slug' => 'kohgiluyeh-boyer-ahmad',
     ],
     [
         'name' => 'گلستان',
@@ -105,7 +105,7 @@ return [
     ],
     [
         'name' => 'لرستان',
-        'slug' => 'larsitan',
+        'slug' => 'lorestan',
     ],
     [
         'name' => 'مازندران',
@@ -113,7 +113,7 @@ return [
     ],
     [
         'name' => 'مركزی',
-        'slug' => 'morkazi',
+        'slug' => 'markazi',
     ],
     [
         'name' => 'هرمزگان',
@@ -121,7 +121,7 @@ return [
     ],
     [
         'name' => 'همدان',
-        'slug' => 'hamedan',
+        'slug' => 'hamadan',
     ],
     [
         'name' => 'یزد',
