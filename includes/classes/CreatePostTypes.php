@@ -37,7 +37,8 @@ class CreatePostTypes {
             'supports' => [
                 'title',
                 'elementor',
-                'thumbnail'
+                'thumbnail',
+				'editor',
             ],
             'menu_icon' => 'dashicons-location-alt',
             'menu_position' => 3,
@@ -121,7 +122,7 @@ class CreatePostTypes {
         }
         $sellers_in_city = str_replace( '"', "'", $sellers_in_city );
 
-        $sellers = dokan_get_sellers( ['number' => 100] );        
+        $sellers = dokan_get_sellers([ 'number' => 100 ]);        
 
         require_once IRMAP_PLUGIN_DIR . 'includes/views/vendor-meta-box.php';
 
@@ -172,11 +173,6 @@ class CreatePostTypes {
             $cat_meta['img'] = $_REQUEST['category_image'];
             update_option( "category_$term_id", $cat_meta );
         }
-        
-
-
-        
-
     }
 
 
