@@ -15,7 +15,8 @@ jQuery('.iranMapAjax').click(function(e) {
         type: 'POST',
         data: {
             action: 'iran_map_ajax_get_sellers',
-            term: term_id
+            term: term_id,
+			city_id: city_id,
         },
         success:function(data){
 
@@ -55,9 +56,9 @@ jQuery('.iranMapAjax').click(function(e) {
 });
 
 jQuery(window).on('popstate', function(e) {
-    e.preventDefault();
    
     if( cityDefaultHtml != '' ) {
+		e.preventDefault();
         window.location.reload();
     }
     
