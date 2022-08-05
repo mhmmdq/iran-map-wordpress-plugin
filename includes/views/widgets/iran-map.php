@@ -115,23 +115,24 @@
                 </ul>
             </div>
 
+			<div id="stateDataBackGround">
+				<div id="stateData">
 
-            <div id="stateData">
-
-                <div class="head">
-                        <span id="IranMapDataClose">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </span>
-                </div>
-
-
-                <ul class="body">
-                    
-                </ul>
+					<div class="head">
+							<span id="IranMapDataClose">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</span>
+					</div>
 
 
+					<ul class="body">
+						
+					</ul>
 
-            </div>
+
+
+				</div>
+			</div>
 
 </div>
 
