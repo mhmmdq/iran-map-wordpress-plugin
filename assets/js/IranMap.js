@@ -42,14 +42,14 @@ document.querySelector('#IranMap').addEventListener('click',function(e){
             cityList.append('<li><a href="' + value.url + '" target="_blank">' + value.title + '</a></li>');
         });
         cityList.append('</ul>');
-        jQuery('#stateData').show();
+        jQuery('#stateDataBackGround').css({"visibility": "unset"});
 
     }
 
 });
 
 jQuery('#IranMapDataClose').click(function(){
-    jQuery('#stateData').hide();
+	jQuery('#stateDataBackGround').css({"visibility": "hidden"});
 });
 
 
