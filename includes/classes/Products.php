@@ -31,6 +31,7 @@ class Products {
         ] );
 
         $html = '<ul>';
+		$html .= '<li><input type="radio" name="iran_map_product_category" value="0"> هیچ کدام</li>';
         foreach( $categories as $category ) {
             $checked = '';
             if( $selected == $category->term_id )
