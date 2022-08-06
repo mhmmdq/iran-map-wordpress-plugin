@@ -5,7 +5,13 @@
     #iran_map_selles_list .item {
         display: inline-block; padding: 4px 8px; margin: 4px;
         background: #f1f1f1; border: 1px solid #ccc;
+        cursor: pointer;
+        transition: 1s all;
     }
+    #iran_map_selles_list .item:active {
+        background: red;
+    }
+
 </style>
 
 <div>
@@ -37,9 +43,9 @@
                     foreach( $sellers_in_city as $seller_id ) {
                         $store_info = dokan_get_store_info($seller_id);
                         $store_name = $store_info['store_name'] ?>
-                        <div class="item">
+                        <span class="item iran_map_seller" id="seller_id_<?php echo $seller_id;?>">
                             <?php echo $store_name;?>
-                        </div>
+                        </span>
                     <?php }
                 }
             ?>
@@ -54,13 +60,6 @@
 
 <script>
 
-    function iran_map_add_store() {
-        
-        var sellers = jQuery('input[name="iran_map_sellers"]').val();
-        
-
-
-    }
 
     jQuery('#iran_map_add_store').click(function() {
         let select = jQuery('#iran_map_stores');
@@ -72,8 +71,27 @@
         if(selllers.indexOf(selected_store) == -1) {
             selllers.push(selected_store);
             jQuery('input[name="iran_map_sellers"]').val(JSON.stringify(selllers));
-            jQuery('#iran_map_selles_list').append(`<span class="item">${selected_store_name}</span>`);
+            jQuery('#iran_map_selles_list').append(`<span class="item" id="seller_id_${selected_store}">${selected_store_name}</span>`);
+        }
+    });
+
+    jQuery('.iran_map_seller').dblclick(function() {
+        
+        let confrim_delete = confirm('آیا از حذف این فروشنده مطمئن هستید؟');
+
+        if(confrim_delete) {
+            let seller_id = jQuery(this).attr('id').replace('seller_id_','');
+            let selllers = jQuery('input[name="iran_map_sellers"]').val();
+            selllers = selllers.replace(/'/g,'"');
+            selllers = JSON.parse(selllers);
+            let index = selllers.indexOf(seller_id);
+            if(index != -1) {
+                selllers.splice(index,1);
+                jQuery('input[name="iran_map_sellers"]').val(JSON.stringify(selllers));
+                jQuery(this).remove();
+            }
         }
 
     });
+
 </script>
