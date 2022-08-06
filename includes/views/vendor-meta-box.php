@@ -7,6 +7,7 @@
         background: #f1f1f1; border: 1px solid #ccc;
         cursor: pointer;
         transition: 1s all;
+        -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
     }
     #iran_map_selles_list .item:active {
         background: red;
