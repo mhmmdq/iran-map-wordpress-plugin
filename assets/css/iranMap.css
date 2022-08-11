@@ -81,6 +81,7 @@
     border-radius: 4px;
     display: inline-block;
     width: 50%;
+    font-size: 18px;
 }
 /* #IranMap #stateData ul li:last-child {
     border-bottom: none;
@@ -98,6 +99,8 @@
 #IranMapDataClose {
     cursor: pointer;
     color: #fff;
+    padding: 10px;
+    font-size: 18px;
 }
 #iranmap-categories {
     list-style: none;
