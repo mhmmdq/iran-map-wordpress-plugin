@@ -59,39 +59,45 @@
 
 
 #IranMap #stateData {
-    background-color: #fff;
-    padding: 10px;
+    background-color: #51c5c7;
+    padding: 10px 20px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 240px;
-
+    width: 350px;
+    
 }
 #IranMap #stateData ul {
     list-style: none;
-    text-align: center;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 #IranMap #stateData ul li {
     padding: 5px 0;
-    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+    width: 50%;
 }
-#IranMap #stateData ul li:last-child {
+/* #IranMap #stateData ul li:last-child {
     border-bottom: none;
-}
+} */
 #IranMap #stateData ul li a {
     display: block;
     padding: 10px;
     text-decoration: none;
+    color: #fff;
 }
 
 #IranMap #stateData ul li:hover {
-    background-color: #f5f5f5;
+    background-color: #3e9799;
 }
 #IranMapDataClose {
     cursor: pointer;
+    color: #fff;
 }
 #iranmap-categories {
     list-style: none;
@@ -100,7 +106,6 @@
     grid-gap: 10px;
     padding: 0;
     margin: 0;
-
 }
 #iranmap-categories a {
 	border: 0 !important;
@@ -117,8 +122,7 @@
     display: block;
     text-align: center;
     border: none !important;
-    padding: 10px;
-    ;
+    padding: 10px;;
 }
 .iranmap-category-image {
     margin: 10px 0;
@@ -126,4 +130,15 @@
 }
 .post-container .post-inner .post-header .post-meta .post-date:before {
 	content: '' !important;
+}
+
+@media screen and (max-width: 480px) {
+    #IranMap #stateData { 
+        width: 90% !important;
+    }
+    #IranMap #stateData ul li {
+        width: 100% !important;
+        display: block !important;
+    }
+
 }
